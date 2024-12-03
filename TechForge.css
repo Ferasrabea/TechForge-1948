@@ -344,9 +344,14 @@ header ul li a:hover {
 
 /* Contact Section */
 .contact {
-  padding: 3rem;
-  background: #f4f4f4;
+  padding: 3rem 1rem;
+  background-color: #f9f9f9;
   text-align: center;
+}
+
+.contact .container {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .contact h2 {
@@ -357,61 +362,96 @@ header ul li a:hover {
 
 .contact p {
   font-size: 1.2rem;
-  color: #555;
   margin-bottom: 2rem;
+  color: #666;
 }
 
+/* Form Styling */
 .contact-form {
-  max-width: 600px;
-  margin: 0 auto;
   background: #fff;
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.form-group {
+.contact-form .form-group {
   margin-bottom: 1.5rem;
   text-align: left;
 }
 
-.form-group label {
-  display: block;
+.contact-form label {
   font-size: 1rem;
+  font-weight: bold;
+  display: block;
   margin-bottom: 0.5rem;
   color: #333;
 }
 
-.form-group input,
-.form-group textarea {
+.contact-form input,
+.contact-form textarea {
   width: 100%;
   padding: 0.75rem;
   font-size: 1rem;
   border: 1px solid #ddd;
   border-radius: 5px;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: #007BFF;
   outline: none;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  transition: border 0.3s ease;
 }
 
-.submit-btn {
-  display: inline-block;
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007BFF;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 150px;
+}
+
+/* Button Styling */
+.contact-form .submit-btn {
+  background: #007BFF;
+  color: #fff;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
-  color: #fff;
-  background: #007BFF;
+  font-weight: bold;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.submit-btn:hover {
+.contact-form .submit-btn:hover {
   background: #0056b3;
+  transform: translateY(-2px);
+}
+
+.contact-form .submit-btn:active {
+  transform: translateY(1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  .contact p {
+    font-size: 1rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+  }
+
+  .contact-form .submit-btn {
+    font-size: 0.9rem;
+  }
 }
 
 
