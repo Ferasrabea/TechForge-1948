@@ -1,0 +1,125 @@
+﻿/* Reset basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Navigation */
+header {
+  background: #444;
+  color: #fff;
+  padding: 1rem 0;
+}
+header ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+header ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+header ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background: url('../images/hero.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+.hero h1 {
+  font-size: 2.5rem;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+.hero .cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.hero .cta:hover {
+  background: #0056b3;
+}
+
+/* Services Section */
+.services {
+  padding: 2rem;
+  background: #f4f4f4;
+  text-align: center;
+}
+.services h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.service-item {
+  margin: 1rem 0;
+}
+.service-item h3 {
+  font-size: 1.5rem;
+}
+.service-item p {
+  font-size: 1rem;
+}
+
+/* Portfolio Section */
+.portfolio {
+  padding: 2rem;
+  text-align: center;
+}
+.portfolio h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.portfolio-item {
+  margin: 1rem 0;
+}
+.portfolio-item h3 {
+  font-size: 1.5rem;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 2rem;
+  background: #e9ecef;
+  text-align: center;
+}
+.testimonials h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+blockquote {
+  font-style: italic;
+  color: #555;
+}
+blockquote cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+}
