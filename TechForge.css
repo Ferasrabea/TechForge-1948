@@ -18,60 +18,64 @@ body {
   background: #f9f9f9;
 }
 
+/* Header Navigation */
 header {
   background: #444;
   color: #fff;
   padding: 1rem 0;
-  position: sticky; /* Keeps the nav bar visible when scrolling */
+  position: sticky; /* Keeps the navigation bar at the top */
   top: 0;
   z-index: 1000;
-  overflow-x: auto; /* Enables horizontal scrolling */
 }
 
-.nav-menu {
-  display: flex;
-  justify-content: flex-start;
-  gap: 1.5rem;
+header ul {
   list-style: none;
-  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
   margin: 0;
-  white-space: nowrap; /* Prevents items from wrapping to a new line */
-  overflow-x: auto; /* Allows horizontal scrolling */
-  scrollbar-width: thin; /* For modern browsers */
 }
 
-.nav-menu li a {
+header ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1rem;
-  padding: 0.5rem;
 }
 
-.nav-menu li a:hover {
+header ul li a:hover {
   text-decoration: underline;
 }
 
-/* Hide scrollbars but keep scrolling enabled for modern browsers */
-.nav-menu::-webkit-scrollbar {
-  height: 5px; /* Adjust the height of the scrollbar */
-}
-
-.nav-menu::-webkit-scrollbar-thumb {
-  background: #007BFF; /* Scrollbar color */
-  border-radius: 10px; /* Round edges */
-}
-
-.nav-menu::-webkit-scrollbar-track {
-  background: #555; /* Scrollbar track color */
-}
-
-/* Responsive styles */
+/* Responsive Design for Mobile */
 @media (max-width: 768px) {
-  .nav-menu {
-    overflow-x: auto; /* Ensure horizontal scrolling on phones */
+  header ul {
+    flex-direction: column; /* Stack links vertically on smaller screens */
+    align-items: center; /* Center the items */
+    display: none; /* Initially hide the menu */
+    background: #444; /* Ensure background matches the header */
+    padding: 1rem 0; /* Add padding for better spacing */
+  }
+
+  header ul.show {
+    display: flex; /* Show the menu when toggled */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger menu */
+    cursor: pointer;
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+  .hamburger div {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
   }
 }
+
 
 
 /* Hero Section */
