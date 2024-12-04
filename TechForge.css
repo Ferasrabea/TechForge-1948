@@ -21,44 +21,58 @@ body {
 header {
   background: #444;
   color: #fff;
-  padding: 1rem;
-  position: sticky;
+  padding: 1rem 0;
+  position: sticky; /* Keeps the nav bar visible when scrolling */
   top: 0;
   z-index: 1000;
+  overflow-x: auto; /* Enables horizontal scrolling */
 }
 
-header ul {
-  list-style: none;
+.nav-menu {
   display: flex;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0 1rem;
   margin: 0;
-  padding: 0;
+  white-space: nowrap; /* Prevents items from wrapping to a new line */
+  overflow-x: auto; /* Allows horizontal scrolling */
+  scrollbar-width: thin; /* For modern browsers */
 }
 
-header ul li a {
+.nav-menu li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1rem;
+  padding: 0.5rem;
 }
 
-header ul li a:hover {
+.nav-menu li a:hover {
   text-decoration: underline;
 }
 
-/* Responsive styles for navigation */
-@media (max-width: 768px) {
-  header ul {
-    flex-direction: column; /* Stack items vertically */
-    gap: 1rem;
-    align-items: center;
-  }
+/* Hide scrollbars but keep scrolling enabled for modern browsers */
+.nav-menu::-webkit-scrollbar {
+  height: 5px; /* Adjust the height of the scrollbar */
+}
 
-  header ul li a {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
+.nav-menu::-webkit-scrollbar-thumb {
+  background: #007BFF; /* Scrollbar color */
+  border-radius: 10px; /* Round edges */
+}
+
+.nav-menu::-webkit-scrollbar-track {
+  background: #555; /* Scrollbar track color */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .nav-menu {
+    overflow-x: auto; /* Ensure horizontal scrolling on phones */
   }
 }
+
 
 /* Hero Section */
 .hero {
