@@ -342,10 +342,9 @@ header ul li a:hover {
   transform: scale(1.2);
 }
 
-/* Contact Section */
 .contact {
-  padding: 3rem 1rem;
-  background-color: #f9f9f9;
+  padding: 2rem;
+  background: #f9f9f9;
   text-align: center;
 }
 
@@ -353,9 +352,9 @@ header ul li a:hover {
   max-width: 600px;
   margin: 0 auto;
   background: #ffffff;
+  border-radius: 8px;
   padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .contact h2 {
@@ -366,92 +365,52 @@ header ul li a:hover {
 
 .contact p {
   font-size: 1.2rem;
+  color: #555;
   margin-bottom: 2rem;
-  color: #666;
 }
 
-/* Form Styling */
-.contact-form .form-group {
+.contact .form-group {
   margin-bottom: 1.5rem;
   text-align: left;
 }
 
-.contact-form label {
-  font-size: 1rem;
-  font-weight: bold;
+.contact .form-group label {
   display: block;
   margin-bottom: 0.5rem;
+  font-size: 1rem;
   color: #333;
 }
 
-.contact-form input,
-.contact-form textarea {
+.contact .form-group input,
+.contact .form-group textarea {
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.8rem;
   font-size: 1rem;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  outline: none;
-  background-color: #f9f9f9;
-  transition: border 0.3s ease, background-color 0.3s ease;
+  border-radius: 4px;
 }
 
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-  color: #aaa;
-  font-size: 0.9rem;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #007BFF;
-  background-color: #fff;
-}
-
-/* Textarea Styling */
-.contact-form textarea {
+.contact .form-group textarea {
   resize: none;
-  height: 120px;
+  height: 100px;
 }
 
-/* Submit Button Styling */
-.contact-form .submit-btn {
-  display: block;
-  width: 100%;
-  background: #007BFF;
+.contact .submit-btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
   color: #fff;
-  padding: 0.75rem;
-  font-size: 1rem;
-  font-weight: bold;
+  background-color: #007BFF;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease;
 }
 
-.contact-form .submit-btn:hover {
-  background: #0056b3;
-  transform: translateY(-2px);
+.contact .submit-btn:hover {
+  background-color: #0056b3;
 }
 
-.contact-form .submit-btn:active {
-  transform: translateY(1px);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .contact .container {
-    padding: 1.5rem;
-  }
-
-  .contact h2 {
-    font-size: 2rem;
-  }
-
-  .contact p {
-    font-size: 1rem;
-  }
-}
 
 
 
