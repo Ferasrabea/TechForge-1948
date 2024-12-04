@@ -188,29 +188,6 @@
 
 
 
-  <script>const form = document.getElementById('contact-form');
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-
-  const formData = new FormData(form);
-
-  try {
-    const response = await fetch('contact.php', {
-      method: 'POST',
-      body: formData,
-    });
-
-    const result = await response.json();
-    if (result.status === 'success') {
-      alert(result.message);
-      form.reset();
-    } else {
-      alert(result.message);
-    }
-  } catch (error) {
-    alert('Something went wrong. Please try again later.');
-  }
-});</script>
     
   </main>
 
