@@ -161,11 +161,14 @@
   </div>
 </section>
 
- <section id="contact" class="contact">
+<section id="contact" class="contact">
   <div class="container">
     <h2>Contact Us</h2>
     <p>We'd love to hear from you! Fill out the form below or reach out to us directly.</p>
-    <form class="contact-form" id="contact-form" action="contact.php" method="POST">
+    <form id="contact-form" method="POST" data-netlify="true" name="contact">
+      <!-- Hidden input for Netlify Forms -->
+      <input type="hidden" name="form-name" value="contact">
+      
       <div class="form-group">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -182,6 +185,7 @@
     </form>
   </div>
 </section>
+
 
 
   <script>const form = document.getElementById('contact-form');
