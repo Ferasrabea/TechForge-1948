@@ -18,25 +18,46 @@ body {
   background: #f9f9f9;
 }
 
-/* Header Navigation */
 header {
   background: #444;
   color: #fff;
-  padding: 1rem 0;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
+
 header ul {
   list-style: none;
   display: flex;
   justify-content: center;
   gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
+
 header ul li a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
+
 header ul li a:hover {
   text-decoration: underline;
+}
+
+/* Responsive styles for navigation */
+@media (max-width: 768px) {
+  header ul {
+    flex-direction: column; /* Stack items vertically */
+    gap: 1rem;
+    align-items: center;
+  }
+
+  header ul li a {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
 }
 
 /* Hero Section */
@@ -94,9 +115,8 @@ header ul li a:hover {
   color: #fff;
 }
 
-/* About Us Section */
 .about-us {
-  padding: 3rem;
+  padding: 2rem;
   background: #f4f4f4;
 }
 
@@ -115,19 +135,15 @@ header ul li a:hover {
 }
 
 .about-us-text h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
   color: #333;
 }
 
 .about-us-text p {
-  font-size: 1.2rem;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.5;
   color: #555;
-}
-
-.about-us-text strong {
-  color: #007BFF;
 }
 
 .about-us-image {
@@ -140,6 +156,31 @@ header ul li a:hover {
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .about-us-container {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center;
+  }
+
+  .about-us-text {
+    text-align: center; /* Center-align text */
+  }
+
+  .about-us-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-us-text p {
+    font-size: 0.9rem;
+  }
+
+  .about-us-image {
+    max-width: 100%; /* Ensure the image resizes properly */
+  }
+}
+
 
 
 /* Services Section */
